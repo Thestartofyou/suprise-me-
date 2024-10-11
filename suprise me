@@ -1,0 +1,39 @@
+import random
+import datetime
+
+# List of affirmations and activities
+affirmations = [
+    "You're doing amazing things!",
+    "Today is going to be fantastic!",
+    "You're stronger than you think.",
+    "Great opportunities are coming your way!",
+    "You are capable of achieving great things.",
+    "Keep shining, you're a star!",
+    "Your potential is limitless.",
+    "Believe in yourself, you've got this!",
+    "You're a force of nature, unstoppable!"
+]
+
+activities = [
+    "Take a 5-minute walk and enjoy the fresh air.",
+    "Try meditating for 10 minutes.",
+    "Give someone a compliment today.",
+    "Do 10 push-ups to boost your energy.",
+    "Call someone you haven't spoken to in a while.",
+    "Take a moment to write down 3 things you're grateful for.",
+    "Try something new today, like a different recipe or hobby!",
+    "Spend a few minutes stretching or doing yoga.",
+    "Read a book for 15 minutes."
+]
+
+# Get current date and time for a touch of personalization
+now = datetime.datetime.now()
+
+# Generate a surprise message
+surprise_message = f"Hello, it's {now.strftime('%A, %B %d, %Y')}! \n\n"
+surprise_message += random.choice(affirmations) + "\n"
+surprise_message += "Here's a fun challenge for you today: \n"
+surprise_message += random.choice(activities)
+
+# Print the surprise message
+print(surprise_message)
